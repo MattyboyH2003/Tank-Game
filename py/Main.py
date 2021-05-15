@@ -48,10 +48,6 @@ class Main: #Main class for storing almost all functions
             if event.type == pygame.QUIT:
                 quit()
 
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE:
-                    self.player.Shoot(self)
-
         #Checks if the specified keys are pressed
         keys = pygame.key.get_pressed()
         if keys[pygame.K_w]:
@@ -62,6 +58,8 @@ class Main: #Main class for storing almost all functions
             self.player.MoveDown(self)
         if keys[pygame.K_d]:
             self.player.RotateRight()
+        if keys[pygame.K_SPACE]:
+            self.player.Shoot(self)
 
 ########################################################################################################
 #                                          - Call Functions -                                          #
